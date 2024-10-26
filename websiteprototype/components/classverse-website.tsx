@@ -105,11 +105,11 @@ export function ClassverseWebsite() {
 
     const formEntryIds = {
       /* name, phone, email, institute, transactionId */
-      name: "entry.2005620554",
-      phone: "entry.1166974658",
-      email: "entry.1045781291",
-      institute: "entry.1065046570",
-      transactionId: "entry.839337160",
+      name: "entry.579389711",
+      phone: "entry.1524014032",
+      email: "entry.803040145",
+      institute: "entry.814936978",
+      transactionId: "entry.1522009722",
     };
 
     const params = new URLSearchParams();
