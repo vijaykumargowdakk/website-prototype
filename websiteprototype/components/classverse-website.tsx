@@ -104,6 +104,7 @@ export function ClassverseWebsite() {
       : "https://docs.google.com/forms/d/e/1FAIpQLSdMW9tpaUGiq7Q4tF3r7zz60Np4rjfHc_Ol_kcVbkxQuriw6Q/formResponse";
 
     const formEntryIds = {
+      /* name, phone, email, institute, transactionId */
       name: "entry.2005620554",
       phone: "entry.1166974658",
       email: "entry.1045781291",
