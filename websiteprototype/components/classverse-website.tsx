@@ -512,7 +512,7 @@ export function ClassverseWebsite() {
                   : enrollmentStep === 1
                   ? "Fill out this form to start your enrollment process."
                   : enrollmentStep === 2
-                  ? "Complete your payment to finalize your enrollment. Verify UPI ID before making the payment: iasvijaykumargowdakk@okaxis thankyou"
+                  ? "Complete your payment to finalize your enrollment. Verify UPI ID before making the payment: iasvijaykumargowdakk@okaxis"
                   : enrollmentStep === 3
                   ? "Confirm your payment details."
                   : "Thank you for enrolling!"}
