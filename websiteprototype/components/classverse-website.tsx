@@ -244,8 +244,16 @@ export function ClassverseWebsite() {
                   by providing affordable, high-quality learning experiences
                   that align with industry demands.
                 </p>
+                </div>
+              <div className="flex items-center justify-center bg-white h-64 rounded-lg">
+                <Image
+                  src="https://drive.google.com/uc?export=view&id=16OP2PJMIf6Cc46fIWBAHUobe9Z8hoiF4"
+                  alt="ClassVerse Logo"
+                  width={320}
+                  height={320}
+                  className="object-contain"
+                />
               </div>
-              <div className="bg-gray-200 h-64 rounded-lg"></div>
             </div>
           </div>
         </section>
