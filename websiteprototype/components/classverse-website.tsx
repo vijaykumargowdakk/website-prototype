@@ -510,7 +510,7 @@ export function ClassverseWebsite() {
                   : enrollmentStep === 1
                   ? "Fill out this form to start your enrollment process."
                   : enrollmentStep === 2
-                  ? "Complete your payment to finalize your enrollment."
+                  ? "Complete your payment to finalize your enrollment. Verify UPI ID before making the payment: iasvijaykumargowdakk@okaxis"
                   : enrollmentStep === 3
                   ? "Confirm your payment details."
                   : "Thank you for enrolling!"}
@@ -589,17 +589,14 @@ export function ClassverseWebsite() {
                 <div className="text-center">
                   <p className="mb-4">Scan the QR code to make the payment:</p>
                   <Image
-                    src={selectedProgram === "6-week" 
-                      ? "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2599qr-q9VKAATKjJZjOAVraSb6nsPI5zFqpY.jpg"
-                      : "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3899qr-jtwPKPM6zfJOu7iElvN2kErBb7yQGo.jpg"
-                    }
-                    alt="Payment QR Code"
-                    width={200}
-                    height={200}
-                    className="mx-auto"
+                    src="https://drive.google.com/uc?export=view&id=1757-w45aNwPCPQdmWGuNK7P68_wtnZW8"
+                    alt="First image"
+                    width={500}
+                    height={300}
                   />
-                  <p className="mt-4">Amount: ₹{selectedProgram === "6-week" ? "2,599" : "3,899"}</p>
+                  {/*<p className="mt-4">Amount: ₹{selectedProgram === "6-week" ? "2,599" : "3,899"}</p>
                   <p className="mt-2">UPI ID: iasvijaykumargowdakk@okaxis</p>
+                  */}
                 </div>
                 <Button className="w-full" onClick={() => setEnrollmentStep(3)}>
                   I have completed the payment
