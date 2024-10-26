@@ -589,8 +589,11 @@ export function ClassverseWebsite() {
                 <div className="text-center">
                   <p className="mb-4">Scan the QR code to make the payment:</p>
                   <Image
-                    src="https://drive.google.com/uc?export=view&id=1757-w45aNwPCPQdmWGuNK7P68_wtnZW8"
-                    alt="First image"
+                    src={selectedProgram === "6-week" 
+                      ? "https://drive.google.com/uc?export=view&id=1757-w45aNwPCPQdmWGuNK7P68_wtnZW8"
+                      : "https://drive.google.com/uc?export=view&id=16pj2pXvBxE4mDbtshuuiQ9RJnVEJ4RrI"
+                    }
+                    alt="Payment QR Code"
                     width={500}
                     height={300}
                   />
