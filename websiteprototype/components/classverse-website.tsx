@@ -104,19 +104,17 @@ export function ClassverseWebsite() {
       : "https://docs.google.com/forms/d/e/1FAIpQLSdMW9tpaUGiq7Q4tF3r7zz60Np4rjfHc_Ol_kcVbkxQuriw6Q/formResponse";
 
     const formEntryIds = {
-      name: "entry.2005620554",
-      phone: "entry.1166974658",
-      email: "entry.1045781291",
-      institute: "entry.1065046570",
-      transactionId: "entry.839337160",
+      name: "entry.579389711",
+      phone: "entry.1524014032",
+      email: "entry.803040145",
+      institute: "entry.814936978",
+      transactionId: "entry.1522009722",
     };
 
     const params = new URLSearchParams();
-    params.append(formEntryIds.name, formData.name);
-    params.append(formEntryIds.phone, formData.phone);
-    params.append(formEntryIds.email, formData.email);
-    params.append(formEntryIds.institute, formData.institute);
-    params.append(formEntryIds.transactionId, formData.transactionId);
+    Object.entries(formEntryIds).forEach(([key, value]) => {
+      params.append(value, formData[key]);
+    });
 
     try {
       const response = await fetch(`${googleFormUrl}?${params.toString()}`, {
@@ -126,10 +124,12 @@ export function ClassverseWebsite() {
           "Content-Type": "application/x-www-form-urlencoded",
         },
       });
+      // We can't check the response status due to CORS,
+      // so we'll assume success if no error was thrown
       return true;
     } catch (error) {
       console.error("Error submitting form:", error);
-      return false;
+      throw error;
     }
   };
 
@@ -138,13 +138,14 @@ export function ClassverseWebsite() {
     const formData = new FormData(e.currentTarget);
     const formDataObject = Object.fromEntries(formData.entries());
 
-    const success = await submitToGoogleForm(formDataObject);
-    if (success) {
+    try {
+      await submitToGoogleForm(formDataObject);
+      // If we reach this point, assume the submission was successful
       setPaymentCompleted(true);
       setEnrollmentCompleted(true);
       setEnrollmentStep(4); // Move to the final step
-    } else {
-      // Handle error
+    } catch (error) {
+      console.error("Error:", error);
       alert("There was an error submitting your form. Please try again.");
     }
   };
